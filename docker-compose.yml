@@ -26,7 +26,7 @@ services:
       - /var/caddy/Caddyfile:/etc/caddy/Caddyfile
       - /var/caddy/site:/srv
       - /var/caddy/caddy_data:/data
-      - caddy_config:/config
+      - /var/caddy/caddy_config:/config
       - /var/caddy/www:/var/www:ro
     restart: always
     environment:
