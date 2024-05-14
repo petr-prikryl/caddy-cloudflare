@@ -23,9 +23,9 @@ services:
       - "${HTTP_PORT}:80"
       - "${HTTPS_PORT}:443"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./site:/srv
-      - caddy_data:/data
+      - /var/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /var/caddy/site:/srv
+      - /var/caddy/caddy_data:/data
       - caddy_config:/config
       - /var/caddy/www:/var/www:ro
     restart: always
